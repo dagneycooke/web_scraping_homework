@@ -12,8 +12,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <!-- link css sheet  -->
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -28,25 +26,31 @@
         
     </div>
 
+    <!-- display most recent news article title and text -->
     <div class="container">
         <div class="row">
             <div class="col">
                 <h2>Latest Mars News</h3>
-                <h4>{{mars_info.news_title}}</h2>
+                <h4><i>{{mars_info.news_title}}</i></h2>
                 <p>{{mars_info.news_text}}</p>
+                <a href="https://mars.nasa.gov/news/" style="font-size:x-small">Find more news articles</a> <!-- link to find more news articles -->
+                <br>
                 <br>
             </div>
         </div>
+        <!-- show current featured image -->
         <div class="row">
             <div class="col-md-8">
                 <h2>Featured Mars Image</h3>
                 <img style="width:100%" src={{mars_info.featured_image}}>
             </div>
+            <!-- current weather on mars from most recent tweet -->
             <div class="col-md-4" >
                 <div class="row" style="border:solid 1px; padding: 20px 10px 20px 10px">
                     <h4>Current Weather on Mars</h4>
                     <p >{{mars_info.weather_info}}</p>
                 </div>
+                <!-- facts about mars from table -->
                 <div class="row">
                     <p></p>
                     <h4 style="padding: 10px 0px 10px 0px">Mars Facts</h4>
@@ -58,14 +62,14 @@
             </div>
         </div>
     </div>
-
+    <!-- hemispheres title -->
     <div class="container">
         <br>
         <h3 style="text-align: center">Mars Hemispheres</h3>
         <hr>
     </div>
-
-    <div clss="container">
+    <!-- display cards for each hemisphere image and name -->
+    <div class="container">
         <div class="row">
             <div class="col">
                 <div class="card" style="width:75%; margin-left:auto"> 
